@@ -1,0 +1,363 @@
+/* Paleta de Cores */
+:root {
+  --primary-color: #cca2ca;
+  --secondary-color: #ffe6f1;
+  --accent-color: #7d5ba6;
+  --text-color: #333;
+  --white-color: #fff;
+}
+
+/* Estilo Global */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+/* Cabeçalho */
+.header {  
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 20px 0;   
+  top: 0;  
+  z-index: 1000; 
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+
+.header .navigation ul {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  
+}
+
+.header .navigation ul li {
+  margin: 0 15px;
+}
+
+.header .navigation ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header .navigation ul li a:hover {
+  color: var(--accent-color);
+}
+.service-image-logo{
+  height: auto;
+  max-width: 100%;  
+}
+
+.service-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Serviços */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  background-color: var(--white-color);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-reverse {
+  flex-direction: row;
+}
+
+.service-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.service-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.service-content p, .service-content ul {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.service-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  text-align: left;
+}
+
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #262626;
+}
+
+/* Popup para WhatsApp */
+.whatsapp-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-popup:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-popup img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+ul.box-redes-sociais {
+  
+  display: flex;
+  background: transparent;
+  width: 200px;
+  float: none;
+  margin: auto;
+
+}
+
+ul.box-redes-sociais li {
+  list-style: none;
+  margin: auto;
+}
+
+
+ul.box-redes-sociais li a {
+  
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 45px;
+  font-size: 22px;
+  margin: 0 5px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #eaeaea;
+  z-index: 1;
+
+}
+
+ul.box-redes-sociais li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .3s;
+  z-index: 3;
+}
+
+ul.box-redes-sociais li a:hover .icon {
+  color: #fff;
+  scale: 1.2;
+}
+
+ul.box-redes-sociais li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .6s;
+  z-index: 2;
+}
+
+ul.box-redes-sociais li a:hover:before {
+  top: 0;
+}
+
+ul.box-redes-sociais li.facebook a:before{
+  background: #3b5999;
+}
+
+ul.box-redes-sociais li.instagram a:before{
+  background:hsl(0 0% 10%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+ul.box-redes-sociais li.twitter a:before{
+  background: #55acee;
+}
+
+ul.box-redes-sociais li.pinterest a:before {
+  background: #dc2933;
+}
+
+ul.box-redes-sociais li.youtube a:before {
+  background: #ff1d15;
+}
+
+.service-image-logo img{
+  width: 100%;
+  height: auto;
+  
+} 
+.service-image img {
+  width: 100%; /* Valor padrão */
+  max-width: 400px; /* Tamanho máximo */
+  height: auto;
+}
+
+/* Dispositivos pequenos (smartphones, até 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Fontes menores para telas pequenas */
+  }
+  
+  .header {
+    padding: 15px 0; /* Reduz espaço vertical */
+  }
+
+  .service-content{
+    flex: 1 1 100%;
+  }
+  
+  .footer {
+    padding: 10px 0;
+    font-size: 0.9rem; /* Texto menor no rodapé */
+  }
+  
+  .service-image-logo img {
+    width: 60px; /* Reduz tamanho da logo */
+    flex: 1 1 100%;
+  }
+  
+  .service-image img {
+    max-width: 250px; /* Imagens menores */
+  }
+}
+
+/* Telas médias (tablets, entre 481px e 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px; /* Tamanho intermediário */
+  }
+  
+  .header {
+    padding: 18px 0; /* Ajuste sutil no cabeçalho */
+  }
+  
+  .footer {
+    font-size: 1rem; /* Mantém o texto legível */
+  }
+  
+  .service-content{
+    flex: 1 1 100%;
+  }
+
+  .service-image-logo img {
+    width: 80px; /* Logo proporcional */
+    flex: 1 1 100%;
+  }
+  
+  .service-image img {
+    max-width: 300px; /* Imagens um pouco maiores */
+  }
+
+  .service-content p{
+    padding: 0 10px;
+  }
+}
+
+/* Telas grandes (monitores comuns, entre 769px e 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  body {
+    font-size: 17px; /* Fontes maiores para melhor leitura */
+  }
+
+  .header {
+    padding: 25px 0; /* Mais espaço no cabeçalho */
+  }
+  
+  .footer {
+    font-size: 1.1rem; /* Texto proporcional */
+  }
+  
+  .service-image-logo img {
+    width: 100px; /* Logo proporcional */
+  }
+  
+  .service-image img {
+    max-width: 350px; /* Imagens ligeiramente maiores */
+  }
+}
+
+/* Telas muito grandes (televisores e monitores acima de 1200px) */
+@media (min-width: 1201px) {
+  body {
+    font-size: 18px; /* Fontes maiores em telas amplas */
+  }
+
+  .header {
+    padding: 30px 0; /* Espaçamento mais amplo */
+  }
+  
+  .footer {
+    font-size: 1.2rem; /* Texto ainda maior para leitura em distância */
+  }
+  
+  .service-image-logo img {
+    width: 120px; /* Aumenta tamanho do logo */
+  }
+  
+  .service-image img {
+    max-width: 400px; /* Restaura tamanho padrão das imagens */
+  }
+}
